@@ -378,6 +378,11 @@ _PUF_STATES = [
     "RFK"
 ]
 
+_PK_ENABLE_STATES = [
+    "Gesperrt",
+    "Freigegeben"
+]
+
 _NOTIFY_MAPPING = {
     "309": "Nachlegen"
 }
@@ -424,7 +429,7 @@ _FIELD_CONFIG = {
     "FW-Anforderung": "FW-Anforderung",
     "Puffer_soll oben": "Puffer_soll oben",
     "Puffer_soll unten": "Puffer_soll unten",
-    "PufZustand": MappingFormatter( "Puffer Zustand", _PUF_STATES ),
+    "PufZustand": MappingFormatter( "PK Freigabestatus", _PK_ENABLE_STATES ),
     "ExtHK Solltmp.": "ExtHK Solltmp.",
     "TVL_A": "TVL_A",
     "TVLs_A": "TVLs_A",
@@ -477,7 +482,7 @@ _FIELD_CONFIG = {
     "max.Leist.TPO": "max.Leist.TPO",
     "PK_ESRegler": "PK_ESRegler",
     "PK_KeBrstScale": "PK_KeBrstScale",
-    "PK_Programm": "PK_Programm",
+    "PK_Programm": NumberFormatter("PK Modus"),
     "PK_RLP": "PK_RLP",
     "PK_Tplat": "PK_Tplat",
     "PK_I Es": "PK_I Es",
