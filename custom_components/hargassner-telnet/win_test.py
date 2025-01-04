@@ -25,7 +25,12 @@ class HargassnerParameter:
         return self._key
 
     def fieldConfig(self):
-        return _FIELD_CONFIG.get(self.key(), self.key())
+        fc = _FIELD_CONFIG.get(self.key(), self.key());
+
+        if fc is None:
+            return self._key
+
+        return fc
 
     def index(self):
         return self._index
@@ -66,7 +71,7 @@ class HargassnerDigitalParameter(HargassnerParameter):
 
     def initializeFromMessage(self, msg):
         try:
-            self._value = (str)(((int)(msg[self._index], 16) & self._bitmask) > 0)
+            self._value = (str)(((int)(msg[self._index], 32) & self._bitmask) > 0)
         except Exception:
             self._value = None
 
@@ -121,27 +126,14 @@ class HargassnerBridge:
                 strUnit = None  # in case parameter has no unit, do not use string conversion but set explicitly to None
 
             # add parameter to parsed list
-
-            chId = (int)(channel.get("id")) # not used cause of dop
+            
+            # chId = (int)(channel.get("id")) # not used cause of dop
 
             self._paramData[uniqueName] = HargassnerAnalogueParameter(
                 uniqueName, index, strUnit
             )
 
             index += 1
-
-            # if there is a dop value of 2, add the parameter again
-
-            dop = channel.get("dop")
-            if dop is not None:
-                dop = (int)(channel.get("dop"))
-                if dop == 2:
-                    self._paramData[uniqueName + "_dop"] = HargassnerAnalogueParameter(
-                        uniqueName, index, strUnit
-                    )
-
-                    index += 1
-                    # print("dop ", uniqueName)
 
         # calculate raw digital data offset
 
@@ -209,15 +201,14 @@ class HargassnerBridge:
             msg = line.split()[1:]  # remove first field "pm"
             msglen = len(msg)
 
-            i = 0
-            for param in self._paramData.values():
-                if i >= msglen or i >= self._expectedMsgLength:
-                    print("early break at len", msglen, "/", self._expectedMsgLength)
-                    break
+            # print(line)
 
+            if msglen != self._expectedMsgLength:
+                raise Exception("received", msglen, ", expected", self._expectedMsgLength)
+
+            for param in self._paramData.values():
                 param.initializeFromMessage(msg)                    
                 print(param)
-                i += 1
 
             self._latestUpdate = datetime.now()
             msgReceived = True

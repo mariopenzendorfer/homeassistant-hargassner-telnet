@@ -37,6 +37,7 @@ _MSG_TELEGRAM = """<DAQPRJ>
             <CHANNEL id='34' name='min.Leist.TRG' unit='%'/>
             <CHANNEL id='35' name='max.Leist.TRG' unit='%'/>
             <CHANNEL id='36' name='TFW' unit='°C'/>
+            <CHANNEL id='36' name='TFW_2' unit='°C'/>
             <CHANNEL id='37' name='FW-Anforderung' unit='°C' dop='0'/>
             <CHANNEL id='38' name='Puffer_soll oben' unit='°C' dop='0'/>
             <CHANNEL id='39' name='Puffer_soll unten' unit='°C' dop='0'/>
@@ -71,6 +72,7 @@ _MSG_TELEGRAM = """<DAQPRJ>
             <CHANNEL id='68' name='TB1' unit='°C'/>
             <CHANNEL id='69' name='TBs_1' unit='°C' dop='0'/>
             <CHANNEL id='70' name='BoiZustand_1' dop='0'/>
+            <CHANNEL id='70' name='BoiZustand_1_2' dop='0'/>
             <CHANNEL id='71' name='TBB' unit='°C'/>
             <CHANNEL id='72' name='TBs_B' unit='°C' dop='0'/>
             <CHANNEL id='73' name='PK_ZK' dop='0'/>
@@ -414,10 +416,11 @@ _FIELD_CONFIG = {
     "Taus": NumberFormatter("Außentemperatur"),
     "TA Gem.": NumberFormatter("Außentemperatur gemittelt"),
     "Max Anf Kessel": "Max Anf Kessel",
-    "Max Anf ZenPuf": "Max Anf ZenPuf",
+    "Max Anf ZenPuf": NumberFormatter("Max. Anforderung Puffer"),
     "min.Leist.TRG": "min.Leist.TRG",
     "max.Leist.TRG": "max.Leist.TRG",
     "TFW": "TFW",
+    "TFW_2": "TFW (alignment duplicate)",
     "FW-Anforderung": "FW-Anforderung",
     "Puffer_soll oben": "Puffer_soll oben",
     "Puffer_soll unten": "Puffer_soll unten",
@@ -449,9 +452,10 @@ _FIELD_CONFIG = {
     "FRB Zustand": "FRB Zustand",
     "TBA": "TBA",
     "TBs_A": "TBs_A",
-    "TB1": "TB1",
-    "TBs_1": "TBs_1",
+    "TB1": NumberFormatter("Boilertemperatur"),
+    "TBs_1": NumberFormatter("Boilertemperatur soll"),
     "BoiZustand_1": MappingFormatter("Boiler Zustand", _BOI_STATES),
+    "BoiZustand_1_2": MappingFormatter("Boiler Zustand (duplicate)", _BOI_STATES),
     "TBB": "TBB",
     "TBs_B": "TBs_B",
     "PK_ZK": MappingFormatter("PK Status", _PK_STATES),
@@ -492,10 +496,10 @@ _FIELD_CONFIG = {
     "PK_Heiz I Lambda": "PK_Heiz I Lambda",
     "PK_Sens U Lambda": "PK_Sens U Lambda",
     "T Spülung": "T Spülung",
-    "PK_UsePos": "PK_UsePos",
-    "PK_AUPSoll": "PK_AUPSoll",
-    "PK_AUPIst": "PK_AUPIst",
-    "PK_AUPStrom": "PK_AUPStrom",
+    "PK_UsePos": NumberFormatter("Pellets Saugpunkt"),
+    "PK_AUPSoll": NumberFormatter("Pellets Saugeinheit Position soll"),
+    "PK_AUPIst": NumberFormatter("Pellets Saugeinheit Position"),
+    "PK_AUPStrom": NumberFormatter("Pellets Saugeinheit Motorstrom"),
     "HKR Anf": "HKR Anf",
     "Anf. HKR0": "Anf. HKR0",
     "Anf. HKR1": "Anf. HKR1",
