@@ -31,7 +31,7 @@ async def async_setup_platform(
     entities = [bridge]
     for p in bridge.data().values():
         if p.hasFieldConfig():
-            entities.append(HargassnerSensor(bridge, p.description(), p.key()))
+            entities.append(HargassnerSensor(bridge, name + " " + p.description(), p.key()))
 
     async_add_entities(entities)
 
@@ -48,15 +48,24 @@ class HargassnerSensor(SensorEntity):
         self._icon = icon
         self._unique_id = bridge.getUniqueIdBase()
         self._unit = bridge.getUnit(paramName)
+        self._stateClass = None
+        self._deviceClass = None
 
-        if self._unit == None:
-            self._stateClass = None
-            self._deviceClass = SensorDeviceClass.ENUM
-            self._options = ["True", "False"]
+        if self._unit == "A" or self._unit == "mA":
+            self._deviceClass = SensorDeviceClass.CURRENT
+        elif self._unit == "V" or self._unit == "mV":
+            self._deviceClass = SensorDeviceClass.VOLTAGE
+        elif self._unit == "W" or self._unit == "mW":
+            self._deviceClass = SensorDeviceClass.POWER
+        elif self._unit == "kg":
+            self._deviceClass = SensorDeviceClass.WEIGHT
+        elif self._unit == "mm":
+            self._deviceClass = SensorDeviceClass.DISTANCE
+        elif self._unit == "Min":
+            self._deviceClass = SensorDeviceClass.DURATION
         elif self._unit == "°C":
             self._deviceClass = SensorDeviceClass.TEMPERATURE
-        else:
-            self._deviceClass = None
+            
 
     @property
     def name(self):
