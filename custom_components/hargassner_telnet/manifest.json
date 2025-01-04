@@ -4,7 +4,7 @@
   "dependencies": [],
   "documentation": "https://github.com/mariopenzendorfer/homeassistant-hargassner-telnet",
   "domain": "hargassner_telnet",
-  "iot_class": "local_polling",
+  "iot_class": "calculated",
   "name": "Hargassner Telnet",
   "requirements": [],
   "version": "0.1.0"

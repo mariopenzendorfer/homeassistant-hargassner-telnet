@@ -268,9 +268,9 @@ class BinaryFormatter(FieldFormatter):
 
     def convertValue(self, value):
         if value.lower() in ["true", "1"]:
-            return "true"
+            return "Aktiv"
         else:
-            return "false"
+            return "Inaktiv"
 
 
 class MappingFormatter(FieldFormatter):
@@ -317,7 +317,7 @@ _PK_STATES = [
     "Aus",
     "Schieberost Init",
     "Start",
-    "Zündung Einschug",
+    "Zündung Einschub",
     "Zündung Pause",
     "Zündung Reduziert",
     "Leistungsbrand",
