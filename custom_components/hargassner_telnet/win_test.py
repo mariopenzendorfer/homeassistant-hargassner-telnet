@@ -311,6 +311,14 @@ class HargassnerBridge:
 async def main():
     bridge = HargassnerBridge("192.168.0.23", "bridge", "1")
 
+    entities = []
+    for p in bridge.data().values():
+        if p.hasFieldConfig():
+            print("adding", p.key())
+            entities.append(p.key())
+
+    print(len(entities))
+
     while 1:
         await bridge.async_update()
         time.sleep(2)

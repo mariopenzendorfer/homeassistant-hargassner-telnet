@@ -94,7 +94,7 @@ class HargassnerBridge(Entity):
         self._missedMsgs = 0
         self._errorLog = ""
         self._infoLog = ""
-        self._name = name + " connection"
+        self._name = name + " Verbindung"
         self._unique_id = uniqueId
         self.setMessageFormat(_MSG_TELEGRAM)
 

@@ -31,7 +31,7 @@ async def async_setup_platform(
     entities = [bridge]
     for p in bridge.data().values():
         if p.hasFieldConfig():
-            entities.append(HargassnerSensor(bridge, name + " " + p.description(), p.key()))
+            entities.append(HargassnerSensor(bridge, p.description(), p.key()))
 
     async_add_entities(entities)
 
