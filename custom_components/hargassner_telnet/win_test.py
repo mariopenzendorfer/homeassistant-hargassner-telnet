@@ -2,7 +2,7 @@ import asyncio
 from datetime import datetime, timedelta
 import xml.etree.ElementTree as xml
 from const import BRIDGE_STATE_OK, BRIDGE_STATE_DISCONNECTED, BRIDGE_TIMEOUT
-from telegram import _MSG_TELEGRAM, _FIELD_CONFIG, FieldFormatter
+from telegram import _MSG_TELEGRAM, _FIELD_CONFIG
 import time
 
 
@@ -23,6 +23,11 @@ class HargassnerParameter:
 
     def key(self):
         return self._key
+
+    def hasFieldConfig(self):
+        fc = _FIELD_CONFIG.get(self.key(), self.key())
+
+        return fc is not None and type(fc) != str
 
     def fieldConfig(self):
         fc = _FIELD_CONFIG.get(self.key(), self.key());
