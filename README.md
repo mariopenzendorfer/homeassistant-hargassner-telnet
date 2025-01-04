@@ -1,6 +1,6 @@
 # homeassistant-hargassner-telnet
 
-Based on [text](https://github.com/TheRealKillaruna/nano_pk)
+Based on [nano_pk](https://github.com/TheRealKillaruna/nano_pk)
 
 Config
 
