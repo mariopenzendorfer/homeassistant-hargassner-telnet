@@ -534,7 +534,7 @@ _FIELD_CONFIG = {
     # "gFl2M zu": BinaryFormatter("gFl2M zu"),
     # "Lamdaheiz.": BinaryFormatter("Lamdaheiz."),
     # "Zündheiz.": BinaryFormatter("Zündheiz."),
-    "FW Pumpe": BinaryFormatter("PK Pumpe"),
+    "FW Pumpe": BinaryFormatter("Puffer Pumpe"),
     # "FLP": BinaryFormatter("FLP"),
     # "SLK_auf": BinaryFormatter("SLK_auf"),
     # "SLK_zu": BinaryFormatter("SLK_zu"),
