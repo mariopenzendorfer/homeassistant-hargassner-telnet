@@ -50,21 +50,29 @@ class HargassnerSensor(SensorEntity):
         self._unit = bridge.getUnit(paramName)
         self._stateClass = None
         self._deviceClass = None
+        self._suggested_display_precision = None
 
         if self._unit == "A" or self._unit == "mA":
             self._deviceClass = SensorDeviceClass.CURRENT
+            self._suggested_display_precision = 0
         elif self._unit == "V" or self._unit == "mV":
             self._deviceClass = SensorDeviceClass.VOLTAGE
+            self._suggested_display_precision = 0
         elif self._unit == "W" or self._unit == "mW":
             self._deviceClass = SensorDeviceClass.POWER
+            self._suggested_display_precision = 0
         elif self._unit == "kg":
             self._deviceClass = SensorDeviceClass.WEIGHT
+            self._suggested_display_precision = 0
         elif self._unit == "mm":
             self._deviceClass = SensorDeviceClass.DISTANCE
+            self._suggested_display_precision = 0
         elif self._unit == "Min":
             self._deviceClass = SensorDeviceClass.DURATION
+            self._suggested_display_precision = 0
         elif self._unit == "°C":
             self._deviceClass = SensorDeviceClass.TEMPERATURE
+            self._suggested_display_precision = 1
             
 
     @property
@@ -91,6 +99,11 @@ class HargassnerSensor(SensorEntity):
     def native_unit_of_measurement(self):
         """Return the unit of measurement."""
         return self._unit
+
+    @property
+    def suggested_display_precision(self):
+        """Return the display precision of the sensor."""
+        return self._suggested_display_precision
 
     @property
     def icon(self):
