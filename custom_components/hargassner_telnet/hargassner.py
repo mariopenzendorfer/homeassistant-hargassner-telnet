@@ -212,7 +212,7 @@ class HargassnerBridge(Entity):
 
             for param in self._paramData.values():
                 param.initializeFromMessage(msg)                    
-                print(param)
+                # print(param)
 
             self._latestUpdate = datetime.now()
             msgReceived = True
