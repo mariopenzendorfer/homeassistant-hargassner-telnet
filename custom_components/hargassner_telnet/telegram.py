@@ -267,7 +267,7 @@ class BinaryFormatter(FieldFormatter):
         super().__init__(name)
 
     def convertValue(self, value):
-        if value.lower() in ["true", "1"]:
+        if value != None and value.lower() in ["true", "1"]:
             return "Aktiv"
         else:
             return "Inaktiv"
