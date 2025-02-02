@@ -1,9 +1,12 @@
+import logging
 import homeassistant.helpers.config_validation as cv
 import voluptuous as vol
 
+from datetime import timedelta
 from homeassistant.core import HomeAssistant
+from homeassistant.const import Platform
 from homeassistant.helpers.typing import ConfigType
-
+from homeassistant.components.sensor import SensorEntity, SensorDeviceClass
 
 from .const import (
     DOMAIN,
@@ -12,6 +15,13 @@ from .const import (
     CONF_UNIQUE_ID
 )
 
+from .hargassner import HargassnerBridge
+
+_LOGGER = logging.getLogger(__name__)
+
+SCAN_INTERVAL = timedelta(seconds=5)
+
+PLATFORMS = [Platform.SENSOR]
 
 CONFIG_SCHEMA = vol.Schema({
     DOMAIN: vol.Schema({
@@ -23,12 +33,14 @@ CONFIG_SCHEMA = vol.Schema({
 )
 
 
-async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
+async def async_setup_entry(hass: HomeAssistant, config: ConfigType) -> bool:
     hass.data[DOMAIN] = {}
-    hass.data[DOMAIN][CONF_HOST] = config[DOMAIN].get(CONF_HOST)
-    hass.data[DOMAIN][CONF_NAME] = config[DOMAIN].get(CONF_NAME)
-    hass.data[DOMAIN][CONF_UNIQUE_ID] = config[DOMAIN].get(CONF_UNIQUE_ID)
+    hass.data[DOMAIN][CONF_HOST] = config.data[CONF_HOST]
+    hass.data[DOMAIN][CONF_NAME] = config.data[CONF_NAME]
+    hass.data[DOMAIN][CONF_UNIQUE_ID] = config.data[CONF_UNIQUE_ID]
 
-    await hass.helpers.discovery.async_load_platform('sensor', DOMAIN, {}, config)
+    # await hass.helpers.discovery.async_load_platform('sensor', DOMAIN, {}, config)
+
+    await hass.config_entries.async_forward_entry_setups(config, PLATFORMS)
 
     return True

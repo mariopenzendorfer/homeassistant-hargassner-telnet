@@ -15,8 +15,8 @@ _LOGGER = logging.getLogger(__name__)
 SCAN_INTERVAL = timedelta(seconds=5)
 
 
-async def async_setup_platform(
-    hass, config, async_add_entities, discovery_info=None
+async def async_setup_entry(
+    hass, config, async_add_entities
 ) -> None:
     """Set up the sensor platform."""
     host = hass.data[DOMAIN][CONF_HOST]
