@@ -1,4 +1,3 @@
-import logging
 from homeassistant.components.sensor import SensorEntity, SensorDeviceClass
 from .const import (
     DOMAIN,
@@ -10,11 +9,6 @@ from .const import (
 from datetime import timedelta
 from .hargassner import HargassnerBridge
 
-_LOGGER = logging.getLogger(__name__)
-
-SCAN_INTERVAL = timedelta(seconds=5)
-
-
 async def async_setup_entry(
     hass, config, async_add_entities
 ) -> None:
@@ -23,10 +17,6 @@ async def async_setup_entry(
     name = hass.data[DOMAIN][CONF_NAME]
     uniqueId = hass.data[DOMAIN][CONF_UNIQUE_ID]
     bridge = HargassnerBridge(host, name, uniqueId)
-    errorLog = bridge.getErrorLog()
-
-    if errorLog != "":
-        _LOGGER.error(errorLog)
 
     entities = [bridge]
     for p in bridge.data().values():

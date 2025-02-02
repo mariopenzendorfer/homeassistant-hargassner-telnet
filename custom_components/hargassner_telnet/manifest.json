@@ -6,6 +6,7 @@
   "domain": "hargassner_telnet",
   "iot_class": "calculated",
   "name": "Hargassner Telnet",
+  "loggers":["custom_components.hargassner_telnet"],
   "requirements": [],
   "version": "0.1.0"
 }
