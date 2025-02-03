@@ -321,7 +321,7 @@ async def main():
 
     while 1:
         await bridge.async_update()
-        time.sleep(2)
+        # time.sleep(2)
 
 
 asyncio.run(main())
