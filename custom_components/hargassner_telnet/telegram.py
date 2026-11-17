@@ -37,104 +37,104 @@ _MSG_TELEGRAM = """<DAQPRJ>
             <CHANNEL id='34' name='min.Leist.TRG' unit='%'/>
             <CHANNEL id='35' name='max.Leist.TRG' unit='%'/>
             <CHANNEL id='36' name='TFW' unit='°C'/>
-            <CHANNEL id='36' name='TFW_2' unit='°C'/>
-            <CHANNEL id='37' name='FW-Anforderung' unit='°C' dop='0'/>
-            <CHANNEL id='38' name='Puffer_soll oben' unit='°C' dop='0'/>
-            <CHANNEL id='39' name='Puffer_soll unten' unit='°C' dop='0'/>
-            <CHANNEL id='40' name='PufZustand' dop='0'/>
-            <CHANNEL id='41' name='ExtHK Solltmp.' unit='°C' dop='0'/>
-            <CHANNEL id='42' name='TVL_A' unit='°C'/>
-            <CHANNEL id='43' name='TVLs_A' unit='°C' dop='0'/>
-            <CHANNEL id='44' name='TRA_A' unit='°C'/>
-            <CHANNEL id='45' name='TRs_A' unit='°C'/>
-            <CHANNEL id='46' name='HKZustand_A' dop='0'/>
-            <CHANNEL id='47' name='FRA Zustand' dop='0'/>
-            <CHANNEL id='48' name='TVL_1' unit='°C'/>
-            <CHANNEL id='49' name='TVLs_1' unit='°C' dop='0'/>
-            <CHANNEL id='50' name='TRA_1' unit='°C'/>
-            <CHANNEL id='51' name='TRs_1' unit='°C'/>
-            <CHANNEL id='52' name='HKZustand_1' dop='0'/>
-            <CHANNEL id='53' name='FR1 Zustand' dop='0'/>
-            <CHANNEL id='54' name='TVL_2' unit='°C'/>
-            <CHANNEL id='55' name='TVLs_2' unit='°C' dop='0'/>
-            <CHANNEL id='56' name='TRA_2' unit='°C'/>
-            <CHANNEL id='57' name='TRs_2' unit='°C'/>
-            <CHANNEL id='58' name='HKZustand_2' dop='0'/>
-            <CHANNEL id='59' name='FR2 Zustand' dop='0'/>
-            <CHANNEL id='60' name='TVL_B' unit='°C'/>
-            <CHANNEL id='61' name='TVLs_B' unit='°C' dop='0'/>
-            <CHANNEL id='62' name='TRA_B' unit='°C'/>
-            <CHANNEL id='63' name='TRs_B' unit='°C'/>
-            <CHANNEL id='64' name='HKZustand_B' dop='0'/>
-            <CHANNEL id='65' name='FRB Zustand' dop='0'/>
-            <CHANNEL id='66' name='TBA' unit='°C'/>
-            <CHANNEL id='67' name='TBs_A' unit='°C' dop='0'/>
-            <CHANNEL id='68' name='TB1' unit='°C'/>
-            <CHANNEL id='69' name='TBs_1' unit='°C' dop='0'/>
-            <CHANNEL id='70' name='BoiZustand_1' dop='0'/>
-            <CHANNEL id='70' name='BoiZustand_1_2' dop='0'/>
-            <CHANNEL id='71' name='TBB' unit='°C'/>
-            <CHANNEL id='72' name='TBs_B' unit='°C' dop='0'/>
-            <CHANNEL id='73' name='PK_ZK' dop='0'/>
-            <CHANNEL id='74' name='PK_O2' unit='%'/>
-            <CHANNEL id='75' name='PK_O2soll' unit='%'/>
-            <CHANNEL id='76' name='PK_TK' unit='°C'/>
-            <CHANNEL id='77' name='PK_TKsoll' unit='°C' dop='0'/>
-            <CHANNEL id='78' name='PK_TRL' unit='°C' dop='0'/>
-            <CHANNEL id='79' name='PK_TRLsoll' unit='°C' dop='0'/>
-            <CHANNEL id='80' name='PK_Spreizung' unit='°C' dop='0'/>
-            <CHANNEL id='81' name='PK_TRG' unit='°C' dop='0'/>
-            <CHANNEL id='82' name='PK_SZ' unit='%' dop='0'/>
-            <CHANNEL id='83' name='PK_SZs' unit='%' dop='0'/>
-            <CHANNEL id='84' name='PK_Leistung' unit='%' dop='0'/>
-            <CHANNEL id='85' name='PK_ESsoll' unit='%' dop='0'/>
-            <CHANNEL id='86' name='PK_min.Leist.TRG' unit='%'/>
-            <CHANNEL id='87' name='PK_max.Leist.TRG' unit='%'/>
-            <CHANNEL id='88' name='max.Leist.Fuell' unit='%'/>
-            <CHANNEL id='89' name='max.Leist.TPO' unit='%'/>
-            <CHANNEL id='90' name='PK_ESRegler' unit='%' dop='0'/>
-            <CHANNEL id='91' name='PK_KeBrstScale' unit='%' dop='0'/>
-            <CHANNEL id='92' name='PK_Programm' dop='0'/>
-            <CHANNEL id='93' name='PK_RLP' unit='%' dop='0'/>
-            <CHANNEL id='94' name='PK_Tplat' unit='°C' dop='0'/>
-            <CHANNEL id='95' name='PK_I Es' unit='mA' dop='0'/>
-            <CHANNEL id='96' name='PK_I Ra' unit='mA' dop='0'/>
-            <CHANNEL id='97' name='PK_I Aa' unit='mA' dop='0'/>
-            <CHANNEL id='98' name='PK_I Sr' unit='mA' dop='0'/>
-            <CHANNEL id='99' name='PK_I Rein' unit='mA' dop='0'/>
-            <CHANNEL id='100' name='BLDC_ES ist' unit='rpm' dop='0'/>
-            <CHANNEL id='101' name='BLDC_ES soll' unit='rpm' dop='0'/>
-            <CHANNEL id='102' name='PK_LZ ES seit Füll.' unit='Min' dop='0'/>
-            <CHANNEL id='103' name='PK_LZ ES seit Ent.' unit='Min' dop='0'/>
-            <CHANNEL id='104' name='PK_Lagerstand' unit='kg' dop='0'/>
-            <CHANNEL id='105' name='PK_Verbrauchszähler' unit='kg' dop='0'/>
-            <CHANNEL id='106' name='PK_Heiz P Lambda' unit='W' dop='2'/>
-            <CHANNEL id='107' name='PK_Heiz U Lambda' unit='V'/>
-            <CHANNEL id='108' name='PK_Heiz I Lambda' unit='mA' dop='0'/>
-            <CHANNEL id='109' name='PK_Sens U Lambda' unit='mV' dop='0'/>
-            <CHANNEL id='110' name='T Spülung' unit='°C'/>
-            <CHANNEL id='111' name='PK_UsePos' dop='0'/>
-            <CHANNEL id='112' name='PK_AUPSoll' unit='mm'/>
-            <CHANNEL id='113' name='PK_AUPIst' unit='mm'/>
-            <CHANNEL id='114' name='PK_AUPStrom' unit='mA'/>
-            <CHANNEL id='115' name='HKR Anf' unit='°C'/>
-            <CHANNEL id='116' name='Anf. HKR0' unit='°C' dop='0'/>
-            <CHANNEL id='117' name='Anf. HKR1' unit='°C' dop='0'/>
-            <CHANNEL id='118' name='Anf. HKR2' unit='°C' dop='0'/>
-            <CHANNEL id='119' name='Anf. HKR3' unit='°C' dop='0'/>
-            <CHANNEL id='120' name='Anf. HKR4' unit='°C' dop='0'/>
-            <CHANNEL id='121' name='Anf. HKR5' unit='°C' dop='0'/>
-            <CHANNEL id='122' name='Anf. HKR6' unit='°C' dop='0'/>
-            <CHANNEL id='123' name='Anf. HKR7' unit='°C' dop='0'/>
-            <CHANNEL id='124' name='Anf. HKR8' unit='°C' dop='0'/>
-            <CHANNEL id='125' name='Anf. HKR9' unit='°C' dop='0'/>
-            <CHANNEL id='126' name='Anf. HKR10' unit='°C' dop='0'/>
-            <CHANNEL id='127' name='Anf. HKR11' unit='°C' dop='0'/>
-            <CHANNEL id='128' name='Anf. HKR12' unit='°C' dop='0'/>
-            <CHANNEL id='129' name='Anf. HKR13' unit='°C' dop='0'/>
-            <CHANNEL id='130' name='Anf. HKR14' unit='°C' dop='0'/>
-            <CHANNEL id='131' name='Anf. HKR15' unit='°C' dop='0'/>
-            <CHANNEL id='132' name='Wasserdruck' unit='bar' dop='2'/>
+            <CHANNEL id='37' name='Unbekannt' unit='°C'/>
+            <CHANNEL id='38' name='FW-Anforderung' unit='°C' dop='0'/>
+            <CHANNEL id='39' name='Puffer_soll oben' unit='°C' dop='0'/>
+            <CHANNEL id='40' name='Puffer_soll unten' unit='°C' dop='0'/>
+            <CHANNEL id='41' name='PufZustand' dop='0'/>
+            <CHANNEL id='42' name='ExtHK Solltmp.' unit='°C' dop='0'/>
+            <CHANNEL id='43' name='TVL_A' unit='°C'/>
+            <CHANNEL id='44' name='TVLs_A' unit='°C' dop='0'/>
+            <CHANNEL id='45' name='TRA_A' unit='°C'/>
+            <CHANNEL id='46' name='TRs_A' unit='°C'/>
+            <CHANNEL id='47' name='HKZustand_A' dop='0'/>
+            <CHANNEL id='48' name='FRA Zustand' dop='0'/>
+            <CHANNEL id='49' name='TVL_1' unit='°C'/>
+            <CHANNEL id='50' name='TVLs_1' unit='°C' dop='0'/>
+            <CHANNEL id='51' name='TRA_1' unit='°C'/>
+            <CHANNEL id='52' name='TRs_1' unit='°C'/>
+            <CHANNEL id='53' name='HKZustand_1' dop='0'/>
+            <CHANNEL id='54' name='FR1 Zustand' dop='0'/>
+            <CHANNEL id='55' name='TVL_2' unit='°C'/>
+            <CHANNEL id='56' name='TVLs_2' unit='°C' dop='0'/>
+            <CHANNEL id='57' name='TRA_2' unit='°C'/>
+            <CHANNEL id='58' name='TRs_2' unit='°C'/>
+            <CHANNEL id='59' name='HKZustand_2' dop='0'/>
+            <CHANNEL id='60' name='FR2 Zustand' dop='0'/>
+            <CHANNEL id='61' name='TVL_B' unit='°C'/>
+            <CHANNEL id='62' name='TVLs_B' unit='°C' dop='0'/>
+            <CHANNEL id='63' name='TRA_B' unit='°C'/>
+            <CHANNEL id='64' name='TRs_B' unit='°C'/>
+            <CHANNEL id='65' name='HKZustand_B' dop='0'/>
+            <CHANNEL id='66' name='FRB Zustand' dop='0'/>
+            <CHANNEL id='67' name='TBA' unit='°C'/>
+            <CHANNEL id='68' name='TBs_A' unit='°C' dop='0'/>
+            <CHANNEL id='69' name='TB1' unit='°C'/>
+            <CHANNEL id='70' name='TBs_1' unit='°C' dop='0'/>
+            <CHANNEL id='71' name='BoiZustand_1' dop='0'/>
+            <CHANNEL id='72' name='Unbekannt 2' dop='0'/>
+            <CHANNEL id='73' name='TBB' unit='°C'/>
+            <CHANNEL id='74' name='TBs_B' unit='°C' dop='0'/>
+            <CHANNEL id='75' name='PK_ZK' dop='0'/>
+            <CHANNEL id='76' name='PK_O2' unit='%'/>
+            <CHANNEL id='77' name='PK_O2soll' unit='%'/>
+            <CHANNEL id='78' name='PK_TK' unit='°C'/>
+            <CHANNEL id='79' name='PK_TKsoll' unit='°C' dop='0'/>
+            <CHANNEL id='80' name='PK_TRL' unit='°C' dop='0'/>
+            <CHANNEL id='81' name='PK_TRLsoll' unit='°C' dop='0'/>
+            <CHANNEL id='82' name='PK_Spreizung' unit='°C' dop='0'/>
+            <CHANNEL id='83' name='PK_TRG' unit='°C' dop='0'/>
+            <CHANNEL id='84' name='PK_SZ' unit='%' dop='0'/>
+            <CHANNEL id='85' name='PK_SZs' unit='%' dop='0'/>
+            <CHANNEL id='86' name='PK_Leistung' unit='%' dop='0'/>
+            <CHANNEL id='87' name='PK_ESsoll' unit='%' dop='0'/>
+            <CHANNEL id='88' name='PK_min.Leist.TRG' unit='%'/>
+            <CHANNEL id='89' name='PK_max.Leist.TRG' unit='%'/>
+            <CHANNEL id='90' name='max.Leist.Fuell' unit='%'/>
+            <CHANNEL id='91' name='max.Leist.TPO' unit='%'/>
+            <CHANNEL id='92' name='PK_ESRegler' unit='%' dop='0'/>
+            <CHANNEL id='93' name='PK_KeBrstScale' unit='%' dop='0'/>
+            <CHANNEL id='94' name='PK_Programm' dop='0'/>
+            <CHANNEL id='95' name='PK_RLP' unit='%' dop='0'/>
+            <CHANNEL id='96' name='PK_Tplat' unit='°C' dop='0'/>
+            <CHANNEL id='97' name='PK_I Es' unit='mA' dop='0'/>
+            <CHANNEL id='98' name='PK_I Ra' unit='mA' dop='0'/>
+            <CHANNEL id='99' name='PK_I Aa' unit='mA' dop='0'/>
+            <CHANNEL id='100' name='PK_I Sr' unit='mA' dop='0'/>
+            <CHANNEL id='101' name='PK_I Rein' unit='mA' dop='0'/>
+            <CHANNEL id='102' name='BLDC_ES ist' unit='rpm' dop='0'/>
+            <CHANNEL id='103' name='BLDC_ES soll' unit='rpm' dop='0'/>
+            <CHANNEL id='104' name='PK_LZ ES seit Füll.' unit='Min' dop='0'/>
+            <CHANNEL id='105' name='PK_LZ ES seit Ent.' unit='Min' dop='0'/>
+            <CHANNEL id='106' name='PK_Lagerstand' unit='kg' dop='0'/>
+            <CHANNEL id='107' name='PK_Verbrauchszähler' unit='kg' dop='0'/>
+            <CHANNEL id='108' name='PK_Heiz P Lambda' unit='W' dop='2'/>
+            <CHANNEL id='109' name='PK_Heiz U Lambda' unit='V'/>
+            <CHANNEL id='110' name='PK_Heiz I Lambda' unit='mA' dop='0'/>
+            <CHANNEL id='111' name='PK_Sens U Lambda' unit='mV' dop='0'/>
+            <CHANNEL id='112' name='T Spülung' unit='°C'/>
+            <CHANNEL id='113' name='PK_UsePos' dop='0'/>
+            <CHANNEL id='114' name='PK_AUPSoll' unit='mm'/>
+            <CHANNEL id='115' name='PK_AUPIst' unit='mm'/>
+            <CHANNEL id='116' name='PK_AUPStrom' unit='mA'/>
+            <CHANNEL id='117' name='HKR Anf' unit='°C'/>
+            <CHANNEL id='118' name='Anf. HKR0' unit='°C' dop='0'/>
+            <CHANNEL id='119' name='Anf. HKR1' unit='°C' dop='0'/>
+            <CHANNEL id='120' name='Anf. HKR2' unit='°C' dop='0'/>
+            <CHANNEL id='121' name='Anf. HKR3' unit='°C' dop='0'/>
+            <CHANNEL id='122' name='Anf. HKR4' unit='°C' dop='0'/>
+            <CHANNEL id='123' name='Anf. HKR5' unit='°C' dop='0'/>
+            <CHANNEL id='124' name='Anf. HKR6' unit='°C' dop='0'/>
+            <CHANNEL id='125' name='Anf. HKR7' unit='°C' dop='0'/>
+            <CHANNEL id='126' name='Anf. HKR8' unit='°C' dop='0'/>
+            <CHANNEL id='127' name='Anf. HKR9' unit='°C' dop='0'/>
+            <CHANNEL id='128' name='Anf. HKR10' unit='°C' dop='0'/>
+            <CHANNEL id='129' name='Anf. HKR11' unit='°C' dop='0'/>
+            <CHANNEL id='130' name='Anf. HKR12' unit='°C' dop='0'/>
+            <CHANNEL id='131' name='Anf. HKR13' unit='°C' dop='0'/>
+            <CHANNEL id='132' name='Anf. HKR14' unit='°C' dop='0'/>
+            <CHANNEL id='133' name='Anf. HKR15' unit='°C' dop='0'/>
+            <CHANNEL id='134' name='Wasserdruck' unit='bar' dop='2'/>
         </ANALOG>
         <DIGITAL>
             <CHANNEL id='0' bit='0' name='Störung'/>
@@ -237,7 +237,6 @@ _MSG_TELEGRAM = """<DAQPRJ>
             <CHANNEL id='7' bit='12' name='DReg3 Mi zu'/>
         </DIGITAL>
     </DAQPRJ>"""
-
 
 class FieldFormatter:
     def __init__(self, name):

@@ -309,7 +309,7 @@ class HargassnerBridge:
 
 
 async def main():
-    bridge = HargassnerBridge("192.168.0.23", "bridge", "1")
+    bridge = HargassnerBridge("192.168.3.185", "bridge", "1")
 
     entities = []
     for p in bridge.data().values():
